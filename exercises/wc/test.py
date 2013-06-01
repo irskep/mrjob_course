@@ -13,7 +13,7 @@ CORRECT_ANSWER = {
 class TestWordCount(unittest.TestCase):
 
     def setUp(self):
-        self.short_text_input = u'data/magna_carta.txt'
+        self.short_text_input = 'data/magna_carta.txt'
 
     def test_wc(self):
         mr_job = MRWordCountJob(['--runner=inline', self.short_text_input])
