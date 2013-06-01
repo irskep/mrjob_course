@@ -1,0 +1,22 @@
+Day 1:
+
+* What is MapReduce
+* When to [not] use MapReduce to solve a problem (this is really
+important)
+* Writing and running simple local jobs for testing
+* Writing multi-step jobs
+* Using different protocols
+
+Day 2:
+
+* Running on EMR
+* Writing protocols
+* Passing command line arguments to tasks
+* Including support files
+
+Day 3:
+
+* Tools for managing EMR jobs, pitfalls (job flow pools)
+* Working with Hadoop configuration
+* Specifying/installing dependencies
+* Other ideas?
