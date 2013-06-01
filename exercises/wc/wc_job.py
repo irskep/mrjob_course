@@ -7,6 +7,14 @@ The input will be UTF-8 text files. The job should output three keys:
 
 The character count does not include newlines. A word is any sequence of
 non-whitespace characters of nonzero length.
+
+Run your job from the command line like this:
+
+    python exercises/wc/wc_job.py data/magna_carta.txt --quiet
+
+or run the test cases like this:
+
+    python exercises/wc/test.py
 """
 
 from mrjob.job import MRJob
