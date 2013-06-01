@@ -3,6 +3,7 @@ import unittest
 from wfc_job import MRWordFrequencyCountJob
 
 
+# only check words with over 100 occurrences
 CORRECT_ANSWER = {
     'a': 167,
     'all': 108,
@@ -39,10 +40,15 @@ class TestWordCount(unittest.TestCase):
 
         with mr_job.make_runner() as runner:
             runner.run()
+            values = {key: 0 for key in CORRECT_ANSWER}
             for line in runner.stream_output():
                 key, value = mr_job.parse_output_line(line)
                 if key in CORRECT_ANSWER:
-                    self.assertEqual(value, CORRECT_ANSWER[key])
+                    # ensure key only appears once
+                    self.assertEqual(values[key], 0)
+                    values[key] = value
+            # check relevant values
+            self.assertEqual(values, CORRECT_ANSWER)
 
 if __name__ == '__main__':
     unittest.main()
