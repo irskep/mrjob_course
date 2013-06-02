@@ -29,7 +29,7 @@ CORRECT_ANSWER = {
 }
 
 
-class TestWordCount(unittest.TestCase):
+class TestWordFrequencyCount(unittest.TestCase):
 
     def setUp(self):
         self.short_text_input = 'data/magna_carta.txt'
@@ -49,6 +49,7 @@ class TestWordCount(unittest.TestCase):
                     values[key] = value
             # check relevant values
             self.assertEqual(values, CORRECT_ANSWER)
+
 
 if __name__ == '__main__':
     unittest.main()

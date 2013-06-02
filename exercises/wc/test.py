@@ -24,5 +24,6 @@ class TestWordCount(unittest.TestCase):
                 key, value = mr_job.parse_output_line(line)
                 self.assertEqual(value, CORRECT_ANSWER[key])
 
+
 if __name__ == '__main__':
     unittest.main()
