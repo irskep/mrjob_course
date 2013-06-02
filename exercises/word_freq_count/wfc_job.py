@@ -1,7 +1,7 @@
 """
-Write a job that calculates the number of occurrences of individual words in
-the input text. The job should output one key/value pair per word where the key
-is the word and the value is the number of occurrences.
+Calculate the number of occurrences of individual words in the input text. The
+job should output one key/value pair per word where the key is the word and the
+value is the number of occurrences.
 """
 
 from mrjob.job import MRJob

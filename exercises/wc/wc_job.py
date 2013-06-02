@@ -1,7 +1,6 @@
 """
-Write a job that calculates the number of characters, words, and lines in the
-given input. Its output will be similar (but not identical) to the UNIX ``wc``
-utility.
+Calculate the number of characters, words, and lines in the given input. Output
+will be similar (but not identical) to the UNIX ``wc`` utility.
 
 The input will be UTF-8 text files. The job should output three keys:
 'characters', 'words', and 'lines'.
