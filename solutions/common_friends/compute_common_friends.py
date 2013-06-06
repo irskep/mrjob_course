@@ -27,4 +27,7 @@ def compute_common_friends(input_paths):
 
 
 if __name__ == '__main__':
-    print compute_common_friends(sys.argv[1:])
+    for name, friends in compute_common_friends(sys.argv[1:]).viewitems():
+        for name2, friends2 in friends.viewitems():
+            if friends2:
+                print name, name2, friends2
