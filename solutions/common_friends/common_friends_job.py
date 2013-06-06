@@ -55,8 +55,11 @@ class MRCommonFriendsJob(MRJob):
 
     def reducer_friend_list_intersection_size(self, friend_pair, friend_lists):
         friend_lists = list(friend_lists)
-        num = len(set(friend_lists[0]) & set(friend_lists[1]))
-        yield friend_pair, num
+        if len(friend_lists) > 1:
+            num = len(set(friend_lists[0]) & set(friend_lists[1]))
+            yield friend_pair, num
+        else:
+            yield friend_pair, {}
 
 
 if __name__ == '__main__':

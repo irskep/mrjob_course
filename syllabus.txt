@@ -6,6 +6,8 @@ important)
 * Writing and running simple local jobs for testing
 * Writing multi-step jobs
 * Using different protocols
+* Logging and Python (need logging.getLogger('mrjob').setLevel() to see debug
+  info)
 
 Day 2:
 

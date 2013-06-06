@@ -1,9 +1,17 @@
+import logging
+import sys
+
 from common_friends_job import MRCommonFriendsJob
+
+
+logging.basicConfig()
 
 
 def compute_common_friends(input_paths):
     mr_job = MRCommonFriendsJob(
-        ['--runner=inline', '--strict-protocols'] + input_paths)
+        ['--runner=local', '--strict-protocols'] + input_paths)
+    logging.getLogger('mrjob').setLevel(logging.INFO)
+
     result = {}
 
     with mr_job.make_runner() as runner:
@@ -16,3 +24,7 @@ def compute_common_friends(input_paths):
             result[friend_pair[1]][friend_pair[0]] = num
 
     return result
+
+
+if __name__ == '__main__':
+    print compute_common_friends(sys.argv[1:])
