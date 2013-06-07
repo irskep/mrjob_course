@@ -35,6 +35,8 @@ It should return this output:
             'Steve Johnson': 0,
         },
     }
+
+Idea came from http://stevekrenzel.com/finding-friends-with-mapreduce
 """
 
 from mrjob.job import MRJob
