@@ -1,13 +1,18 @@
 Day 1:
 
 * What is MapReduce
-* When to [not] use MapReduce to solve a problem (this is really
-important)
+* What is mrjob
 * Writing and running simple local jobs for testing
+* E: wc
+* E: word_freq_count
 * Writing multi-step jobs
+* E: most_used_words
 * Using different protocols
 * Logging and Python (need logging.getLogger('mrjob').setLevel() to see debug
   info)
+* E: common_friends
+
+Homework: most_unique_review
 
 Day 2:
 
@@ -18,7 +23,8 @@ Day 2:
 
 Day 3:
 
+* When to [not] use MapReduce to solve a problem
+* Combiners
 * Tools for managing EMR jobs, pitfalls (job flow pools)
 * Working with Hadoop configuration
 * Specifying/installing dependencies
-* Other ideas?
