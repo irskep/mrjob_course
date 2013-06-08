@@ -33,9 +33,9 @@ Review Objects
 ==============
 
 Review objects contain the review text, the star rating, and information on
-votes Yelp users have cast on the review. Use user_id to associate this review
-with others by the same user. Use business_id to associate this review with
-others of the same business.
+votes Yelp users have cast on the review. Use `user_id` to associate this
+review with others by the same user. Use `business_id` to associate this review
+with others of the same business.
 
 ```
 {
