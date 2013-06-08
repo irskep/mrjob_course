@@ -8,7 +8,7 @@ Business objects contain basic information about local businesses. The
 information for visualizations, but note that you'll still need to comply with
 the API TOS. The fields are as follows:
 
-```json
+```
 {
   'type': 'business',
   'business_id': (a unique identifier for this business),
@@ -37,7 +37,7 @@ votes Yelp users have cast on the review. Use user_id to associate this review
 with others by the same user. Use business_id to associate this review with
 others of the same business.
 
-```json
+```
 {
   'type': 'review',
   'business_id': (the identifier of the reviewed business),
@@ -59,7 +59,7 @@ User Objects
 User objects contain aggregate information about a single user across all of
 Yelp (including businesses and reviews not in this dataset).
 
-```json
+```
 {
   'type': 'user',
   'user_id': (unique user identifier),
