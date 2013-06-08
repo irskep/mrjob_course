@@ -1,28 +1,23 @@
 import unittest
 
-from wc_job import MRWordCountJob
+from unique_review_job import MRUniqueReviewJob
 
 
-CORRECT_ANSWER = {
-    'characters': 93116,
-    'words': 16858,
-    'lines': 1844,
-}
+CORRECT_ANSWER = "81IjU5L-t-QQwsE38C63hQ:OlMjqqzWZUv2-62CSqKq_A:2008-07-02\n"
 
 
-class TestWordCount(unittest.TestCase):
+class TestUniqueReviewJob(unittest.TestCase):
 
     def setUp(self):
-        self.short_text_input = 'data/magna_carta.txt'
+        self.short_text_input = 'data/yelp/reviews_100.json'
 
-    def test_wc(self):
-        mr_job = MRWordCountJob(['--runner=inline', self.short_text_input])
+    def test_job(self):
+        mr_job = MRUniqueReviewJob(['--runner=inline', self.short_text_input])
 
         with mr_job.make_runner() as runner:
             runner.run()
             for line in runner.stream_output():
-                key, value = mr_job.parse_output_line(line)
-                self.assertEqual(value, CORRECT_ANSWER[key])
+                self.assertEqual(line, CORRECT_ANSWER)
 
 
 if __name__ == '__main__':

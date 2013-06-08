@@ -17,7 +17,6 @@ Homework: most_unique_review
 Day 2:
 
 * Running on EMR
-* Writing protocols
 * Passing command line arguments to tasks
 * Including support files
 
