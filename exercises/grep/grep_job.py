@@ -1,6 +1,6 @@
 """
-Filter input lines by regular expression. The expression to use should be
-supplied by the command line argument -e or --expression.
+Filter input lines by Python regular expression. The expression to use should
+be supplied by the command line argument -e or --expression.
 
 Example input:
 

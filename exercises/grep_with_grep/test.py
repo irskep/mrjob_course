@@ -16,9 +16,8 @@ class TestGrep(unittest.TestCase):
     def setUp(self):
         self.input_path = 'data/names.txt'
 
-    def test_wc(self):
-        mr_job = MRGrepJob(['--runner=inline', '-e', '^Ste.*',
-                            self.input_path])
+    def _test_with_args(self, args):
+        mr_job = MRGrepJob(['--runner=local', self.input_path] + args)
 
         with mr_job.make_runner() as runner:
             runner.run()
@@ -26,6 +25,12 @@ class TestGrep(unittest.TestCase):
                 set(mr_job.parse_output_line(line)[1].rstrip()
                     for line in runner.stream_output()),
                 CORRECT_ANSWER)
+
+    def test_basic(self):
+        self._test_with_args(['-e', r'\^Ste\.\*'])
+
+    def test_extended(self):
+        self._test_with_args(['-e', r'^Ste.*', '--extended'])
 
 
 if __name__ == '__main__':

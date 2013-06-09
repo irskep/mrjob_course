@@ -1,13 +1,15 @@
 Day 1:
 
-* What is MapReduce
-* What is mrjob
-* Writing and running simple local jobs for testing
+* What is MapReduce (15m)
+* What is mrjob (15m)
+* Writing and running simple local jobs for testing (30m)
 * E: wc
 * E: word_freq_count
-* Writing multi-step jobs
+* mapper_init, mapper_final optimizations (15m)
+* E: wc_optimized
+* Writing multi-step jobs (20m)
 * E: most_used_words
-* Using different protocols
+* Using different protocols (30m)
 * Logging and Python (need logging.getLogger('mrjob').setLevel() to see debug
   info)
 * E: common_friends
@@ -16,14 +18,20 @@ Homework: most_unique_review
 
 Day 2:
 
-* Running on EMR
-* Passing command line arguments to tasks
-* Including support files
+* What is EMR (30m)
+* Running on EMR (20m)
+* E: run homework on EMR
+* Passing command line arguments to tasks (30m)
+* E: grep
+* Fun detour: grep with subprocess
+* E: subprocess_grep
+* Including support files (20m)
+* E: sqlite
 
 Day 3:
 
 * When to [not] use MapReduce to solve a problem
 * Combiners
+* Managing dependencies
 * Tools for managing EMR jobs, pitfalls (job flow pools)
 * Working with Hadoop configuration
-* Specifying/installing dependencies
