@@ -3,6 +3,9 @@ Filter input lines by POSIX regular expression. The expression to use should be
 supplied by the command line argument -e or --expression. It should use POSIX
 extended regular expressions if --extended is passed.
 
+The difference is described here:
+    http://www.regular-expressions.info/posix.html#bre
+
 Example input:
 
     abc
