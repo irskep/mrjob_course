@@ -1,4 +1,4 @@
-Download `all.json` from <TBD>.
+Download `all.json` from http://www.yelp.com/dataset_challenge.
 
 Business Objects
 ================
@@ -21,11 +21,8 @@ the API TOS. The fields are as follows:
   'longitude': (longitude),
   'stars': (star rating, rounded to half-stars),
   'review_count': (review count),
-  'photo_url': (photo url),
   'categories': [(localized category names)]
   'open': (is the business still open for business?),
-  'schools': (nearby universities),
-  'url': (yelp url)
 }
 ```
 
@@ -71,5 +68,23 @@ Yelp (including businesses and reviews not in this dataset).
     'funny': (count of funny votes across all reviews),
     'cool': (count of cool votes across all reviews)
   }
+}
+```
+
+Checkin Objects
+===============
+
+```
+{
+	'type': 'checkin',
+	'business_id': (encrypted business id),
+	'checkin_info': {
+		'0-0': (number of checkins from 00:00 to 01:00 on all Sundays),
+		'1-0': (number of checkins from 01:00 to 02:00 on all Sundays),
+		...
+		'14-4': (number of checkins from 14:00 to 15:00 on all Thursdays),
+		...
+		'23-6': (number of checkins from 23:00 to 00:00 on all Saturdays)
+	} # if there was no checkin for a hour-day block it will not be in the dict
 }
 ```
