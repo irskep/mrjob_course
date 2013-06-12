@@ -24,7 +24,6 @@ We are using a flag (-e) instead of a positional argument because mrjob does
 not provide a straightforward way to do that.
 """
 
-import re
 from optparse import OptionError
 
 from mrjob.job import MRJob
