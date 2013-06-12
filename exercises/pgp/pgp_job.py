@@ -24,8 +24,7 @@ class MRPGPJob(MRJob):
     OUTPUT_PROTOCOL = RawValueProtocol
 
     def load_options(self, args):
-        args += always_args
-        super(MRPGPJob, self).load_options(args)
+        super(MRPGPJob, self).load_options(args + always_args)
 
     def mapper_init(self):
         self.gpg = gnupg.GPG(gnupghome='~/.gnupg')
