@@ -9,9 +9,8 @@ Day 1:
 * E: wc_optimized
 * Writing multi-step jobs (20m)
 * E: most_used_words
+* Together: select, union, intersect, difference, groupby+aggregate
 * Using different protocols (30m)
-* Logging and Python (need logging.getLogger('mrjob').setLevel() to see debug
-  info)
 * E: common_friends
 
 Homework: most_unique_review
@@ -23,15 +22,19 @@ Day 2:
 * E: run homework on EMR
 * Passing command line arguments to tasks (30m)
 * E: grep
-* Fun detour: grep with subprocess
+* Fun detour: grep with subprocess (20m)
 * E: subprocess_grep
-* Including support files (20m)
-* E: sqlite
+* Joins (20m)
+
+Homework: Get the user with the most consecutive daily checkins
 
 Day 3:
 
+* Including support files (20m)
+* E: pgp
 * When to [not] use MapReduce to solve a problem
+* How to go about optimization
 * Combiners
+* E: wc_super_optimized
 * Managing dependencies
 * Tools for managing EMR jobs, pitfalls (job flow pools)
-* Working with Hadoop configuration
