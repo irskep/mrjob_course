@@ -1,6 +1,5 @@
 """
-Use ``mapper_init()`` and ``mapper_final()`` to write a more efficient version
-of the wc exercise.
+Use ``combiner()`` to optimize the word count job even more.
 """
 
 from mrjob.job import MRJob
