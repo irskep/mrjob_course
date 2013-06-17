@@ -3,7 +3,7 @@ import unittest
 from unique_review_job import MRUniqueReviewJob
 
 
-CORRECT_ANSWER = "81IjU5L-t-QQwsE38C63hQ:OlMjqqzWZUv2-62CSqKq_A:2008-07-02\n"
+CORRECT_ANSWER = "FCcFT610nQBVcRdY-devQA:40aklZ2SQPKnlTPZdvAqww:2012-01-14\n"
 
 
 class TestUniqueReviewJob(unittest.TestCase):
