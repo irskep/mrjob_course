@@ -5,11 +5,12 @@ Setup for Big Dive
    [steve+bigdive@steveasleep.com](steve+bigdive@steveasleep.com)
 2. Clone this repository
 3. `cd` to your local copy
-4. `pip install -r requirements.txt`
-5. Visit [Yelp Dataset Challenge](http://www.yelp.com/dataset_challenge/data)
+4. Optional: create a `virtualenv` or use the one you used with Alessandro
+5. `pip install -r requirements.txt`
+6. Visit [Yelp Dataset Challenge](http://www.yelp.com/dataset_challenge/data)
    and get a copy of the Yelp data set
-6. Put it in `mrjob_course/data/yelp`
-7. Run `make`
+7. Put it in `mrjob_course/data/yelp`
+8. Run `make`
 
 Organization
 ============
