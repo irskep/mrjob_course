@@ -5,7 +5,7 @@ Setup for Big Dive
    [steve+bigdive@steveasleep.com](steve+bigdive@steveasleep.com)
 2. Clone this repository
 3. `cd` to your local copy
-4. Optional: create a `virtualenv` or use the one you used with Alessandro
+4. Optional: `virtualenv --no-site-packages --distribute env && env/bin/activate`
 5. `pip install -r requirements.txt`
 6. Visit [Yelp Dataset Challenge](http://www.yelp.com/dataset_challenge/data)
    and get a copy of the Yelp data set
