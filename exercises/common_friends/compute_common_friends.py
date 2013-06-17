@@ -37,6 +37,8 @@ It should return this output:
     }
 """
 
+import sys
+
 from common_friends_job import MRCommonFriendsJob
 
 
@@ -52,3 +54,9 @@ def compute_common_friends(input_paths):
             a, b = mr_job.parse_output_line(line)
 
     return result
+
+if __name__ == '__main__':
+    for name, friends in compute_common_friends(sys.argv[1:]).viewitems():
+        for name2, friends2 in friends.viewitems():
+            if friends2:
+                print '%r %r %r' % (name, name2, friends2)
