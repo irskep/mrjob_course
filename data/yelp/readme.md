@@ -1,5 +1,3 @@
-Download `all.json` from http://www.yelp.com/dataset_challenge.
-
 Business Objects
 ================
 
