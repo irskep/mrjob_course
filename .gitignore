@@ -1,5 +1,7 @@
 # repo-relevant files from elsewhere
 data/yelp/*.json
+data/yelp/*.gz
+!data/yelp/reviews_100.json
 # virtualenv if you want
 env/
 
