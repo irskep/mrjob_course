@@ -9,6 +9,11 @@ from mrjob.job import MRJob
 
 class MRWordFrequencyCountJob(MRJob):
 
+    def steps(self):
+        return [self.mr(mapper_init=self.mapper_init, mapper=self.mapper,
+                        mapper_final=self.mapper_final,
+                        combiner=self.sum_words, reducer=self.sum_words)]
+
     def mapper_init(self):
         #self.words = {}
         #self.words = defaultdict(0)
@@ -31,7 +36,7 @@ class MRWordFrequencyCountJob(MRJob):
         for word, count in self.words.iteritems():
             yield word, count
 
-    def reducer(self, key, values):
+    def sum_words(self, key, values):
         yield key, sum(values)
 
 
