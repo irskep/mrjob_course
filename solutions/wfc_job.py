@@ -3,16 +3,33 @@ Write a job that calculates the number of occurrences of individual words in
 the input text. The job should output one key/value pair per word where the key
 is the word and the value is the number of occurrences.
 """
-
+from collections import Counter, defaultdict
 from mrjob.job import MRJob
 
 
 class MRWordFrequencyCountJob(MRJob):
 
+    def mapper_init(self):
+        #self.words = {}
+        #self.words = defaultdict(0)
+        #self.words = defaultdict(lambda: 0)
+        self.words = Counter()
+
     def mapper(self, _, line):
         for word in line.split():
             if word.strip():
-                yield word, 1,
+                #self.words.setdefault(word, 0)
+
+                #if word not in words:
+                #    words[word] = 0
+
+                #self.words[word] = self.words.get(word, 0) + 1
+
+                self.words[word] += 1
+
+    def mapper_final(self):
+        for word, count in self.words.iteritems():
+            yield word, count
 
     def reducer(self, key, values):
         yield key, sum(values)
